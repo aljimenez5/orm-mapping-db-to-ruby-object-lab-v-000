@@ -45,7 +45,8 @@ class Student
       SELECT * FROM students WHERE grade < ?
     SQL
     
-    self.new_from_db(DB[:conn].execute(sql, "12"))
+    students = DB[:conn].execute(sql, "12")
+    self.new_from_db()
   end
   
   def self.first_X_students_in_grade_10(num)
