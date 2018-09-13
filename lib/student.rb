@@ -38,6 +38,7 @@ class Student
     SQL
     
     DB[:conn].execute(sql, "9")
+    binding.pry
   end
   
   def self.students_below_12th_grade
