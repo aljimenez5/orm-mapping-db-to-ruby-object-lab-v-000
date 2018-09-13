@@ -53,7 +53,7 @@ class Student
       SELECT * FROM students WHERE CAST(grade AS INTEGER) = ? LIMIT ?
     SQL
     
-    DB[:conn].execute(sql, "10", num)
+    DB[:conn].execute(sql, 10, num)
   end
   
   def self.first_student_in_grade_10 
