@@ -46,7 +46,7 @@ class Student
     SQL
     
     students = DB[:conn].execute(sql, "12")
-    students.each do |student|
+    students.map do |student|
       self.new_from_db(student)
     end
   end
