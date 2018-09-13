@@ -64,7 +64,7 @@ class Student
       SELECT * FROM students WHERE grade = ?
     SQL
     
-    DB[:conn].execute(sql, "10").first
+    DB[:conn].execute(sql, "10")
   end
   
   def self.all_students_in_grade_X(grade)
