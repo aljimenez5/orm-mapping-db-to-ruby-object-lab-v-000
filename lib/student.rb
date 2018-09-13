@@ -46,6 +46,7 @@ class Student
     SQL
     
     students = DB[:conn].execute(sql, "12")
+    self.new_from_db(students)
   end
   
   def self.first_X_students_in_grade_10(num)
